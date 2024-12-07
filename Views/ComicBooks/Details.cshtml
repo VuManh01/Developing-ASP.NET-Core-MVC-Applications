@@ -1,0 +1,22 @@
+@model ComicSystem.Models.ComicBook
+
+<h2>Comic Book Details</h2>
+
+<div>
+    <h4>ComicBook</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Title</dt>
+        <dd class="col-sm-10">@Model.Title</dd>
+
+        <dt class="col-sm-2">Author</dt>
+        <dd class="col-sm-10">@Model.Author</dd>
+
+        <dt class="col-sm-2">Price Per Day</dt>
+        <dd class="col-sm-10">@Model.PricePerDay</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ComicBookID" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

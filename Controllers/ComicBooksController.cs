@@ -21,24 +21,24 @@ namespace ComicSystem.Controllers
         {
             return View(await _context.ComicBooks.ToListAsync());
         }
+// GET: ComicBooks/Details/5
+public async Task<IActionResult> Details(int? id)
+{
+    if (id == null)
+    {
+        return NotFound();
+    }
 
-        // GET: ComicBooks/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+    var comicBook = await _context.ComicBooks
+        .FirstOrDefaultAsync(m => m.ComicBookID == id);
+    if (comicBook == null)
+    {
+        return NotFound();
+    }
 
-            var comicBook = await _context.ComicBooks
-                .FirstOrDefaultAsync(m => m.ComicBookID == id);
-            if (comicBook == null)
-            {
-                return NotFound();
-            }
+    return View(comicBook);
+}
 
-            return View(comicBook);
-        }
 
         // GET: ComicBooks/Create
         public IActionResult Create()
@@ -109,34 +109,38 @@ namespace ComicSystem.Controllers
             return View(comicBook);
         }
 
-        // GET: ComicBooks/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+      // GET: ComicBooks/Delete/5
+public async Task<IActionResult> Delete(int? id)
+{
+    if (id == null)
+    {
+        return NotFound();
+    }
 
-            var comicBook = await _context.ComicBooks
-                .FirstOrDefaultAsync(m => m.ComicBookID == id);
-            if (comicBook == null)
-            {
-                return NotFound();
-            }
+    var comicBook = await _context.ComicBooks
+        .FirstOrDefaultAsync(m => m.ComicBookID == id);
+    if (comicBook == null)
+    {
+        return NotFound();
+    }
 
-            return View(comicBook);
-        }
+    return View(comicBook);
+}
 
-        // POST: ComicBooks/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var comicBook = await _context.ComicBooks.FindAsync(id);
-            _context.ComicBooks.Remove(comicBook);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+// POST: ComicBooks/Delete/5
+[HttpPost, ActionName("Delete")]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> DeleteConfirmed(int id)
+{
+    var comicBook = await _context.ComicBooks.FindAsync(id);
+    if (comicBook != null)
+    {
+        _context.ComicBooks.Remove(comicBook);
+        await _context.SaveChangesAsync();
+    }
+    return RedirectToAction(nameof(Index));
+}
+
 
         private bool ComicBookExists(int id)
         {

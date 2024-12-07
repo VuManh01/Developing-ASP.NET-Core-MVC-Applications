@@ -1,16 +1,19 @@
 @model ComicSystem.Models.ComicBook
 
 <h2>Delete Comic Book</h2>
-<p>Are you sure you want to delete this?</p>
-<dl>
-    <dt>Title</dt>
-    <dd>@Model.Title</dd>
-    <dt>Author</dt>
-    <dd>@Model.Author</dd>
-    <dt>Price Per Day</dt>
-    <dd>@Model.PricePerDay</dd>
+<p>Are you sure you want to delete this comic book?</p>
+<dl class="row">
+    <dt class="col-sm-2">Title</dt>
+    <dd class="col-sm-10">@Model.Title</dd>
+    <dt class="col-sm-2">Author</dt>
+    <dd class="col-sm-10">@Model.Author</dd>
+    <dt class="col-sm-2">Price Per Day</dt>
+    <dd class="col-sm-10">@Model.PricePerDay</dd>
 </dl>
-<form asp-action="DeleteConfirmed">
+
+<form asp-action="DeleteConfirmed" method="post">
     <input type="hidden" asp-for="ComicBookID" />
     <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
 </form>
+
