@@ -12,7 +12,8 @@
     </div>
     <div class="form-group">
         <label for="PricePerDay">Price Per Day</label>
-        <input type="number" class="form-control" asp-for="PricePerDay" />
+        <input type="number" class="form-control" asp-for="PricePerDay"  step="0.01" />
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </form>

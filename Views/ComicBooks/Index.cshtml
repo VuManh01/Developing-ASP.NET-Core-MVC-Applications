@@ -19,7 +19,7 @@
             <tr>
                 <td>@item.Title</td>
                 <td>@item.Author</td>
-                <td>@item.PricePerDay</td>
+                <td>@item.PricePerDay.ToString("F2")</td>
                 <td>
                     <a class="btn btn-info" asp-action="Details" asp-route-id="@item.ComicBookID">Details</a> |
                     <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.ComicBookID">Edit</a> |
