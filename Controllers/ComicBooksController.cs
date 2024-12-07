@@ -132,12 +132,15 @@ public async Task<IActionResult> Delete(int? id)
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> DeleteConfirmed(int id)
 {
-    var comicBook = await _context.ComicBooks.FindAsync(id);
+    // var comicBook = await _context.ComicBooks.FindAsync(id);
+    var comicBook = await _context.ComicBooks
+        .FirstOrDefaultAsync(m => m.ComicBookID == id);
     if (comicBook != null)
     {
         _context.ComicBooks.Remove(comicBook);
         await _context.SaveChangesAsync();
     }
+   
     return RedirectToAction(nameof(Index));
 }
 
