@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ComicSystemAPI.Models
+namespace ComicSystem.Models
 {
-   public class Rental
+    public class Rental
 {
-    public int Id { get; set; }
-    public int CustomerId { get; set; }
-    public int ComicBookId { get; set; }
-    public int Quantity { get; set; }
+    public int RentalID { get; set; }
+    public int CustomerID { get; set; }
     public DateTime RentalDate { get; set; }
     public DateTime ReturnDate { get; set; }
+    public string Status { get; set; }
+
+    public Customer Customer { get; set; }
+    public ICollection<RentalDetail> RentalDetails { get; set; }
 }
 
 }
