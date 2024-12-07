@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\baithi12.7.2024\\ComicSystem\\ComicSystem.csproj": {}
+    "E:\\baithi12.7.2024\\Developing-ASP.NET-Core-MVC-Applications\\ComicSystem.csproj": {}
   },
   "projects": {
-    "E:\\baithi12.7.2024\\ComicSystem\\ComicSystem.csproj": {
+    "E:\\baithi12.7.2024\\Developing-ASP.NET-Core-MVC-Applications\\ComicSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\baithi12.7.2024\\ComicSystem\\ComicSystem.csproj",
+        "projectUniqueName": "E:\\baithi12.7.2024\\Developing-ASP.NET-Core-MVC-Applications\\ComicSystem.csproj",
         "projectName": "ComicSystem",
-        "projectPath": "E:\\baithi12.7.2024\\ComicSystem\\ComicSystem.csproj",
+        "projectPath": "E:\\baithi12.7.2024\\Developing-ASP.NET-Core-MVC-Applications\\ComicSystem.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\baithi12.7.2024\\ComicSystem\\obj\\",
+        "outputPath": "E:\\baithi12.7.2024\\Developing-ASP.NET-Core-MVC-Applications\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

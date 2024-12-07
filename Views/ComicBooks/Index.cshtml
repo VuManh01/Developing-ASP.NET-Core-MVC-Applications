@@ -1,0 +1,31 @@
+@model IEnumerable<ComicSystem.Models.ComicBook>
+
+<h2>Comic Books</h2>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>PricePerDay</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Author</td>
+                <td>@item.PricePerDay</td>
+                <td>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.ComicBookID">Details</a> |
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.ComicBookID">Edit</a> |
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ComicBookID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

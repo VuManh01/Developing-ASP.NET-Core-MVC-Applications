@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vKJIl5hZrGY=",
+  "dgSpecHash": "TnZ3fHQPG8A=",
   "success": true,
-  "projectFilePath": "E:\\baithi12.7.2024\\ComicSystem\\ComicSystem.csproj",
+  "projectFilePath": "E:\\baithi12.7.2024\\Developing-ASP.NET-Core-MVC-Applications\\ComicSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

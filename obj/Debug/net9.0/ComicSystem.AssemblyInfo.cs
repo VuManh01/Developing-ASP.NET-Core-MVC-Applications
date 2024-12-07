@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ComicSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+876e76c46527ac40e3d1121bdaa5af36ba816e32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fafe3cde22f683b6a9f7a8d24e68302cc4e38349")]
 [assembly: System.Reflection.AssemblyProductAttribute("ComicSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ComicSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
